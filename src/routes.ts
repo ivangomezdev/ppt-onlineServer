@@ -16,6 +16,7 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 app.use(cors());
+const APP_SERVER = "https://ppt-onlineserver.onrender.com"
 
 //CREATE__ROOM
 app.post("/createRoom", (req, res) => {
@@ -81,6 +82,6 @@ app.post("/joinRoom", (req, res) => {
 
 //START__GAME
 
-app.listen("3000", () => {
+app.listen(APP_SERVER, () => {
   console.log("server corriendo");
 });
